@@ -38,7 +38,7 @@ function ProfileButton({ user }) {
 	return (
 		<div>
 			<button className="user" onClick={toggleMenu}>
-				<FaUserCircle style={{ color: "brown", width: "70px", height: "auto", paddingTop: "0" }} />
+				<FaUserCircle style={{ color: "bisque", width: "70px", height: "auto", paddingTop: "0" }} />
 			</button>
 			<ul className={ulClassName} ref={ulRef}>
 				<li>{user.username}</li>

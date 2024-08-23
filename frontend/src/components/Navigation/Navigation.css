@@ -3,14 +3,18 @@
     justify-content: space-around;
     list-style: none;
     font-size: xx-large;
-    align-items: top;
+    align-items: start;
+    background-color: brown;
+    margin: 0;
+    border: 0;
 }
 
 .lOButt {
-    background-color: brown;
-    color: white;
+    background-color: bisque;
+    color: brown;
     padding: .5em;
     font-size: .7em;
+    border: 1px solid rgb(136, 74, 74);
 }
 
 li {
@@ -23,6 +27,7 @@ li {
     flex-direction: column;
     width: 270px;
     list-style-type: circle;
+    color: bisque;
 }
 
 .profile-dropdown.hidden {
@@ -36,6 +41,6 @@ li {
 }
 
 a {
-    color: brown;
+    color: bisque;
     text-decoration: none;
 }
