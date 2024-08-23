@@ -1,0 +1,35 @@
+html {
+    background-color: bisque;
+}
+
+.login-page{
+    background-color: bisque;
+    padding: 5em;
+    padding-top: 3em;
+}
+
+.login {
+    color: brown;
+    text-shadow: 1vw;
+}
+
+.login-form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.lIButt {
+    color: white;
+    background-color: brown;
+    font-size: 1.5em;
+    padding: .5em;
+}
+
+input {
+    font-size: 1.5em;
+    height: 2em;
+}
+
+
+
+
