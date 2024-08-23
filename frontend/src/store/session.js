@@ -59,7 +59,14 @@ export const signUp = (userS) => async (dispatch) => {
 	};
 
 export const logoutThunk = () => async (dispatch) => {
-	console.log(dispatch(logOut()));
+	const res = await csrfFetch(`/api/session`, {
+		method: "DELETE"
+	});
+
+	const data = await res.json();
+	console.log(data);
+	dispatch(logOut());
+	return data;
 };
 
 export default function sessionReducer(state = initialState, action) {

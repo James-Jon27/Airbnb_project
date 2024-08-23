@@ -22,7 +22,7 @@ function SignUpFormPage() {
 		if (password === confirmPassword) {
 			setErrors({});
 			return dispatch(
-				sessionActions.signup({
+				sessionActions.signUp({
 					email,
 					username,
 					firstName,
