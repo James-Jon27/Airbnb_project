@@ -1,0 +1,41 @@
+.nav-li {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: xx-large;
+    align-items: top;
+}
+
+.lOButt {
+    background-color: brown;
+    color: white;
+    padding: .5em;
+    font-size: .7em;
+}
+
+li {
+    font-size: 2.5rem;
+    margin: .5rem;
+}
+
+.profile-dropdown {
+	display: flex;
+    flex-direction: column;
+    width: 270px;
+    list-style-type: circle;
+}
+
+.profile-dropdown.hidden {
+	display: none; /* hides the dropdown */
+}
+
+.user {
+    background: none;
+    border: none;
+    width: 310px;
+}
+
+a {
+    color: brown;
+    text-decoration: none;
+}
