@@ -20,6 +20,8 @@ export function ModalProvider({ children }) {
 		}
 	};
 
+//test
+
 	const contextValue = {
 		modalRef, // reference to modal div
 		modalContent, // React component to render inside modal
