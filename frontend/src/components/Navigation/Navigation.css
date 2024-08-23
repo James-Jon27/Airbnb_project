@@ -44,3 +44,7 @@ a {
     color: bisque;
     text-decoration: none;
 }
+
+.home:hover {
+    text-decoration: underline;
+}

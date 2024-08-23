@@ -14,3 +14,8 @@
     font-size: 1.5em;
     padding: .5em;
 }
+
+.hover:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

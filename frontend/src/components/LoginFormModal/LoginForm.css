@@ -1,5 +1,6 @@
 html {
     background-color: bisque;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .login-page{
@@ -10,12 +11,19 @@ html {
 
 .login {
     color: brown;
-    text-shadow: 1vw;
+    text-decoration: underline;
+    text-shadow: 1em;
+}
+
+.lgLabel {
+    margin: .3rem;
+
 }
 
 .login-form {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .lIButt {
@@ -23,6 +31,8 @@ html {
     background-color: brown;
     font-size: 1.5em;
     padding: .5em;
+    height: 2.2em;
+    text-align: center;
 }
 
 input {
