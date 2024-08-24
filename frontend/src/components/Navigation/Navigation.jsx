@@ -42,7 +42,7 @@ function Navigation({ isLoaded }) {
 
 	return (
 		<ul className={ulClass}>
-			<li>
+			<li style={{width: "max-content"}}>
 				<NavLink className="home" to="/">
 					ChemEnB <AiFillExperiment /> 
 				</NavLink>
