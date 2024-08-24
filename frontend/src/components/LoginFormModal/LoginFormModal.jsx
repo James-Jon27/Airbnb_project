@@ -11,6 +11,17 @@ function LoginFormModal() {
 	const [errors, setErrors] = useState({});
 	const { closeModal } = useModal();
 
+	const loginDemo = () => {
+		return dispatch(sessionActions.loginThunk({ credential: "demo@user.io", password: "password" }))
+			.then(closeModal)
+			.catch(async (res) => {
+				const data = await res.json();
+				if (data && data.errors) {
+					setErrors(data.errors);
+				}
+			});
+	}
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setErrors({});
@@ -23,6 +34,13 @@ function LoginFormModal() {
 				}
 			});
 	};
+	
+	const disabled = (credential, password) => {
+		if (credential.length < 4 || password.length < 6) return true;
+		return false;
+	}
+
+
 
 	return (
 		<div className="login-page">
@@ -35,8 +53,9 @@ function LoginFormModal() {
 					<input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
 				</label>
 				{errors.credential && <p>{errors.credential}</p>}
-				<button className="lIButt" type="submit">Log In</button>
+				<button disabled={disabled(credential, password)} className="lIButt" type="submit">Log In</button>
 			</form>
+			<button className="demo-butt" style={{marginTop : "1em"}} onClick={loginDemo} >DEMO USER</button>
 		</div>
 	);
 }

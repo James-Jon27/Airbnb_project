@@ -30,7 +30,7 @@ function ProfileButton({ user }) {
 
 	const logout = (e) => {
 		e.preventDefault();
-		dispatch(sessionActions.logout());
+		dispatch(sessionActions.logoutThunk());
 	};
 
 	const ulClassName = "profile-dropdown" + (showMenu ? "" : " hidden");
@@ -41,10 +41,10 @@ function ProfileButton({ user }) {
 				<FaUserCircle className="hover" style={{ color: "bisque", width: "70px", height: "auto", paddingTop: "0" }} />
 			</button>
 			<ul className={ulClassName} ref={ulRef}>
-				<li>{user.username}</li>
 				<li>
-					{user.firstName} {user.lastName}
+					Hello, {user.firstName} {user.lastName}
 				</li>
+				<li>{user.username}</li>
 				<li>{user.email}</li>
 				<li>
 					<button className="lOButt" onClick={logout}>Log Out</button>
