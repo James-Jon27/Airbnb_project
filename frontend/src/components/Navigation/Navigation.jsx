@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import ProfileButton from "./ProfileButton";
-import * as sessionActions from "../../store/session";
+// import * as sessionActions from "../../store/session";
 import "./Navigation.css";
 import OpenModalButton from "../OpenModalButton";
 import LoginFormModal from "../LoginFormModal";
@@ -9,12 +9,12 @@ import SignUpFormModal from "../SignUpFormModal";
 import { AiFillExperiment } from "react-icons/ai";
 function Navigation({ isLoaded }) {
 	const sessionUser = useSelector((state) => state.session.user);
-	const dispatch = useDispatch();
+	// const dispatch = useDispatch();
 
-	const logout = (e) => {
-		e.preventDefault();
-		dispatch(sessionActions.logoutThunk());
-	};
+	// const logout = (e) => {
+	// 	e.preventDefault();
+	// 	dispatch(sessionActions.logoutThunk());
+	// };
 
 	const sessionLinks = sessionUser ? (
 		<>

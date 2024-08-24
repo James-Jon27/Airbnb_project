@@ -33,18 +33,9 @@ html {
     padding: .5em;
     height: 2.2em;
     text-align: center;
-    width: 95px;
+    width: max-content;
 }
 
-.demo-butt {
-        color: white;
-    background-color: brown;
-    font-size: 1.5em;
-    padding: .5em;
-    height: 2.2em;
-    text-align: center;
-    width: 172px;
-}
 
 input {
     font-size: 1.5em;

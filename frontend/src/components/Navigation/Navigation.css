@@ -36,7 +36,7 @@ li {
 .profile-dropdown {
 	display: flex;
 	flex-direction: column;
-	width: 270px;
+	width:max-content;
 	list-style-type: circle;
 	color: bisque;
 	list-style: none;

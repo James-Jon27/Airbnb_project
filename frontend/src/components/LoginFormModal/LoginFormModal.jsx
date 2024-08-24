@@ -55,7 +55,7 @@ function LoginFormModal() {
 				{errors.credential && <p>{errors.credential}</p>}
 				<button disabled={disabled(credential, password)} className="lIButt" type="submit">Log In</button>
 			</form>
-			<button className="demo-butt" style={{marginTop : "1em"}} onClick={loginDemo} >DEMO USER</button>
+			<button className="lIButt" style={{marginTop : "1em"}} onClick={loginDemo} >DEMO USER</button>
 		</div>
 	);
 }

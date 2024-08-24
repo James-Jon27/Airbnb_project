@@ -38,7 +38,7 @@ function ProfileButton({ user }) {
 	return (
 		<div>
 			<button className="user" onClick={toggleMenu}>
-				<FaUserCircle className="hover" style={{ color: "bisque", width: "70px", height: "auto", paddingTop: "0" }} />
+				<FaUserCircle className="hover" style={{ color: "bisque", width: "3rem", height: "auto", paddingTop: "0" }} />
 			</button>
 			<ul className={ulClassName} ref={ulRef}>
 				<li>
