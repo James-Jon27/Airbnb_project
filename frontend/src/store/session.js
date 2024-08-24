@@ -37,7 +37,7 @@ export const restoreUser = () => async (dispatch) => {
 	const res = await fetch(`/api/session`);
 	if (res.ok) {
 		const data = await res.json();
-		console.log(data);
+		// console.log(data);
 		dispatch(logIn(data.user));
 	}
 };
