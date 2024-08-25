@@ -49,7 +49,7 @@ export default function SpotDetails() {
 			</span>
 			<div className="spot-images">
 				{SpotImages.map(({ id, url, preview }) => {
-					return <img key={id} src={url} alt={preCheck(preview)} />;
+					return <img key={id} src={url} alt={preCheck(preview)} className={preCheck(preview)} />;
 					// eventually seed one large, 4 small
 				})}
 			</div>
