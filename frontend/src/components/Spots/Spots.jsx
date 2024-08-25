@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { MdStars } from "react-icons/md";
 
 export default function Spots() {
 	const allSpots = useSelector((state) => state.spots);
@@ -14,12 +15,11 @@ export default function Spots() {
                 spots.map(({id, city, state, avgStarRating, price, previewImage, name}) => {
                     return (
                         <div key={id}>
-                            <img src={previewImage} alt={name} style={{width: "10rem"}}/>
+                            <img src={previewImage} alt={name} style={{width: "25rem"}}/>
                             <span>
                                 <p>{city}, {state}</p>
                                 <span>
-                                <
-                                <p>{avgStarRating}</p>
+                                <MdStars /><p>{avgStarRating}</p>
                                 </span>
                             </span>
                             <span>{price}/night</span>
