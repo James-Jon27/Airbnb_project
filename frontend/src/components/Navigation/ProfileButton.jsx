@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { FaUserCircle } from "react-icons/fa";
+import { TfiAlignJustify } from "react-icons/tfi";
 import * as sessionActions from "../../store/session";
 
 function ProfileButton({ user }) {
@@ -30,24 +31,27 @@ function ProfileButton({ user }) {
 
 	const logout = (e) => {
 		e.preventDefault();
-		dispatch(sessionActions.logout());
+		dispatch(sessionActions.logoutThunk());
 	};
 
 	const ulClassName = "profile-dropdown" + (showMenu ? "" : " hidden");
 
 	return (
-		<div>
+		<div className="div">
 			<button className="user" onClick={toggleMenu}>
-				<FaUserCircle className="hover" style={{ color: "bisque", width: "70px", height: "auto", paddingTop: "0" }} />
+				<TfiAlignJustify className="hover" style={{ color: "bisque", width: "3rem", height: "auto", paddingTop: "0" }} />
+				<FaUserCircle className="hover" style={{ color: "bisque", width: "3rem", height: "auto", paddingTop: "0" }} />
 			</button>
 			<ul className={ulClassName} ref={ulRef}>
-				<li>{user.username}</li>
 				<li>
-					{user.firstName} {user.lastName}
+					Hello, {user.firstName} {user.lastName}
 				</li>
+				<li>{user.username}</li>
 				<li>{user.email}</li>
 				<li>
-					<button className="lOButt" onClick={logout}>Log Out</button>
+					<button className="lOButt" onClick={logout}>
+						Log Out
+					</button>
 				</li>
 			</ul>
 		</div>

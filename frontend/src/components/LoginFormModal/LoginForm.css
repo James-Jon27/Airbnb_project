@@ -33,7 +33,9 @@ html {
     padding: .5em;
     height: 2.2em;
     text-align: center;
+    width: max-content;
 }
+
 
 input {
     font-size: 1.5em;
