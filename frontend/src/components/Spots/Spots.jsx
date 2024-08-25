@@ -17,6 +17,10 @@ export default function Spots() {
 		dispatch(spotActions.getSpot());
 	}, [dispatch]);
 
+	if (!spots) {
+		return <h1 style={{ color: "brown", textAlign: "center" }}>Loading...</h1>;
+	}
+
 	return (
 		<div>
 			<div className="grid">
