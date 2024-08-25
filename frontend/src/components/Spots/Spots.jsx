@@ -23,7 +23,7 @@ export default function Spots() {
 				{spots.map(({ id, city, state, avgStarRating, price, previewImage, name }) => {
 					return (
 						<Link key={id} style={{ color: "black" }} to={`/spots/${id}`}>
-							<div key={id} className="tile">
+							<div className="tile">
 								<img src={previewImage} alt={name} style={{ width: "25rem" }} />
 								<span>
 									<h1>{name}</h1>
