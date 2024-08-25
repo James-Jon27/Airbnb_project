@@ -1,23 +1,32 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { MdStars } from "react-icons/md";
+import { useEffect } from "react";
+import * as spotActions from "../../store/spots";
+import { Link } from "react-router-dom";
 
 export default function Spots() {
+	const dispatch = useDispatch();
+
 	const allSpots = useSelector((state) => state.spots);
 	const spotsIterable = Object.values(allSpots);
 	const spots = [];
 	for (const spot of spotsIterable) {
 		spots.push(spot);
 	}
+	useEffect(() => {
+		dispatch(spotActions.getSpot());
+	}, [dispatch]);
 
 	return (
 		<div>
-			<ul>
+			<div className="grid">
 				{spots.map(({ id, city, state, avgStarRating, price, previewImage, name }) => {
-                    console.log(id, city, state, avgStarRating, previewImage, price, name)
 					return (
-                            <div key={id} className="tile">
+						<Link key={id} style={{ color: "black" }} to={`/spots/${id}`}>
+							<div key={id} className="tile">
 								<img src={previewImage} alt={name} style={{ width: "25rem" }} />
 								<span>
+									<h1>{name}</h1>
 									<p>
 										{city}, {state}
 									</p>
@@ -27,10 +36,11 @@ export default function Spots() {
 									</span>
 								</span>
 								<span>{price}/night</span>
-                            </div>
+							</div>
+						</Link>
 					);
 				})}
-			</ul>
+			</div>
 		</div>
 	);
 }

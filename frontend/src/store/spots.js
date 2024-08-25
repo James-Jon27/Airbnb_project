@@ -31,8 +31,8 @@ export const getOneSpot = (id) => async (dispatch) => {
 	const res = await csrfFetch(`/api/spots/${id}`);
 	if (res.ok) {
 		const data = await res.json();
-		dispatch(loadOne(data));
-		return data;
+		dispatch(loadOne(data[0]));
+		return data[0];
 	}
 };
 
@@ -49,9 +49,8 @@ export default function spotsReducer(state = initialState, action) {
 		}
 
 		case LOAD_ONE: {
-			const allSpots = {};
-			allSpots.detail = action.payload;
-			return { ...allSpots, ...state };
+			const newState = {...state, detail: action.payload};
+			return newState;
 		}
 
 		default:
