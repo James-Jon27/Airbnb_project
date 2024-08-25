@@ -40,7 +40,7 @@ export default function spotsReducer(state = initialState, action) {
 	switch (action.type) {
 		case LOAD: {
 			const allSpots = {};
-			action.payload.forEach((spot) => [(allSpots[spot.id] = spot)]);
+			action.payload.forEach((spot) => allSpots[spot.id] = spot);
 
 			return {
 				...allSpots,
