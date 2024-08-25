@@ -42,10 +42,7 @@ export default function spotsReducer(state = initialState, action) {
 			const allSpots = {};
 			action.payload.forEach((spot) => allSpots[spot.id] = spot);
 
-			return {
-				...allSpots,
-				...state,
-			};
+			return allSpots;
 		}
 
 		case LOAD_ONE: {
