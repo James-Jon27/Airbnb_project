@@ -26,7 +26,7 @@ const spotsInfo = async (spots) => {
     const spot = spots[i];
     const reviews = await Review.findAll({ where: { spotId: spot.id } });
     const totalRating = reviews.reduce((acc, el) => acc + el.stars, 0);
-    const avgStarRating = totalRating / reviews.length;
+    let avgStarRating = (totalRating / reviews.length).toFixed(1);
 
     // check images
     const img = await SpotImage.findOne({

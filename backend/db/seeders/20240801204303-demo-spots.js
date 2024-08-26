@@ -126,7 +126,7 @@ const bulkSpots = [
 		country: "United States of America",
 		lat: 33.74905,
 		lng: -84.388229,
-		name: "FusionWorks",
+		name: "Fusion Works",
 		description: "Lab dedicated to fusion energy and cutting-edge physics research",
 		price: 310,
 	},
