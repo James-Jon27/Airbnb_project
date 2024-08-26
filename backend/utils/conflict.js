@@ -8,7 +8,6 @@ async function checkConflict(booking) {
   });
 
   //               VVVV === spot
-  console.log(spot);
   const bookings = spot.Bookings;
   //                    ^^^^^^^^ === bookings
 
