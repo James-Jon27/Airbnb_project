@@ -3,6 +3,7 @@ import { MdStars } from "react-icons/md";
 import { useEffect } from "react";
 import * as spotActions from "../../store/spots";
 import { Link } from "react-router-dom";
+import "./Spots.css";
 
 export default function Spots() {
 	const dispatch = useDispatch();
@@ -26,20 +27,22 @@ export default function Spots() {
 			<div className="grid">
 				{spots.map(({ id, city, state, avgStarRating, price, previewImage, name }) => {
 					return (
-						<Link key={id} style={{ color: "black" }} to={`/spots/${id}`}>
-							<div className="tile">
+						<Link key={id} style={{ color: "black" }} to={`/spots/${id}`} title={name}>
+							<div className="tile" aria-labelledby="name">
+								<div role="tooltip" id="name">
+									{name}
+								</div>
 								<img src={previewImage} alt={name} style={{ width: "25rem" }} />
-								<span>
-									<h1>{name}</h1>
-									<p>
+								<span className="info">
+									<h5>
 										{city}, {state}
-									</p>
-									<span>
+									</h5>
+									<span className="ratings">
 										<MdStars />
 										<p>{avgStarRating}</p>
 									</span>
 								</span>
-								<span>{price}/night</span>
+								<span className="price">{price}<p>/night</p></span>
 							</div>
 						</Link>
 					);

@@ -1,0 +1,21 @@
+.tile,
+.info,
+.ratings,
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.tile {
+    flex-direction: column;
+}
+
+[role="tooltip"] {
+    display: none;
+}
+
+.tile:hover + [role="tooltip"]
+.tile:focus + [role="tooltip"] {
+    position: relative;
+    display: block;
+}
